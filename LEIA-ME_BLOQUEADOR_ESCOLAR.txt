@@ -1,0 +1,62 @@
+BLOQUEADOR ESCOLAR - LABORATÓRIOS
+=================================
+
+Arquivos:
+- bloqueador_escola.py ........ código-fonte
+- lista_bloqueio_escolar_2026.txt .... lista por categoria
+- lista_bloqueio_escolar_2026.csv .... lista para edição/importação
+- compilar_bloqueador.bat ............ gera o EXE com PyInstaller
+
+QUANTIDADE
+----------
+406 entradas únicas na lista curada.
+
+COMO USAR
+---------
+1. Instale Python 3 no computador de administração.
+2. Coloque os arquivos na mesma pasta.
+3. Execute compilar_bloqueador.bat.
+4. O EXE aparecerá em:
+   dist\BloqueadorEscolar.exe
+
+No computador da escola, execute como administrador:
+   BloqueadorEscolar.exe install
+
+Para remover somente as regras adicionadas pelo programa:
+   BloqueadorEscolar.exe remove
+
+Para consultar:
+   BloqueadorEscolar.exe status
+
+SEGURANÇA
+---------
+O programa faz backup do HOSTS antes de cada alteração.
+Ele modifica somente a seção delimitada por:
+   # >>> BLOQUEIO ESCOLAR - INICIO >>>
+   # <<< BLOQUEIO ESCOLAR - FIM <<<
+
+IMPORTANTE SOBRE HOSTS
+----------------------
+O arquivo HOSTS do Windows não suporta:
+   *.roblox.com
+
+Portanto, subdomínios precisam ser adicionados individualmente.
+Além disso, muitos jogos usam CDNs e domínios compartilhados.
+Por isso, esta solução é uma camada local simples, não substitui
+firewall/DNS filtering/proxy em uma rede escolar.
+
+MINECRAFT EDUCATION
+-------------------
+Minecraft Education NÃO foi incluído como bloqueio educacional.
+A Microsoft o identifica como uma plataforma de aprendizagem para
+uso em sala de aula. O Minecraft comum e sites comunitários de
+Minecraft aparecem na lista de bloqueio.
+
+RECOMENDAÇÃO
+------------
+Para laboratório escolar, combine:
+- filtro DNS/firewall na rede;
+- bloqueio de proxies/VPN;
+- política de navegador;
+- contas sem privilégio de administrador;
+- e este HOSTS como camada adicional.
